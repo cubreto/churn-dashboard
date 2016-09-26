@@ -1,0 +1,225 @@
+---
+title: "Churn Prediction"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    #vertical_layout: scroll
+    #logo: "www/ThinkBig.png"
+    #theme: default
+    #css: www/style.css
+runtime: shiny
+    
+---
+
+```{r setup, include=FALSE}
+library(shinydashboard)
+library(flexdashboard)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+```
+
+Introduction
+=========================================
+
+Row 
+-----------------------------------------------------------------------
+
+### {data-width=50%}
+
+**Think Big Team**
+
+- Giacomo Snidero
+- Almir Mutapcic
+- Guillermo Breto Rangel
+
+**Business Problem**
+
+1. A telecommunication company wants to understand the motivations of customers churning and find possible actions to tackle this. 
+2. The dataset to leverage contains the customers services usage combined with demographics info.     
+3. Develop a data statistical churn model and visualisation dashboard to drive actionable insights.
+
+### {data-width=50%}
+
+**Analytics Workflow**
+
+Ingest Raw Data into Hadoop via Spark, used Spark and Python for statistical analysis and R-Shiny for visualization:
+
+<img src="www/analyticsworkflow.png">
+
+Row 
+-----------------------------------------------------------------------
+
+### {data-width=340}
+
+**Our Approach**
+
+- Batch ingest all raw data the into Hadoop Hive Tables, leveraging Spark
+- Join and aggregate datasets
+- Develop data profiling to understand the main dataset 
+- Trained statistical models to undestand the churn main drivers and to predict customer churn
+- Use statistical model to predict customers like to churn on unseen data
+
+### {data-width=340}
+
+**Key Benefits and Outcomes**
+
+Key benefits were:
+
+- Indentified the churn patterns and key drivers 
+- Developed Statistical model that predicts customer churn with a score around 80%
+
+
+Churn Models
+=====================================
+
+ **Models**
+ 
+ The main ML algorithms used to model the data are:
+ 
+ For Classification:
+ 
+  * Decision tree Model
+  * Logistic Regression Model
+  * Random Forest Model
+
+
+
+Churn Drivers
+=====================================
+
+**Drivers**
+ 
+The main drivers of the customer churn are:
+ 
+* 'Reloads Inactive Days' = Number of days without recharge
+* 'User Lifetime' = Customer aging in months
+* 'Sms Outgoing Inactive Days' = Number of days without outgoing sms message
+* 'Sms Outgoing To Onnet Inactive Days' 
+* 'Sms Outgoing To Offnet Inactive Days',
+* 'Sms Outgoing To Abroad Inactive Days' = Number of days without outgoing sms message to other countries
+* 'Gprs Inactive Days' = Number of days without data usage
+* 'Calls Outgoing Inactive Days',
+* 'Calls Outgoing To Offnet Inactive Days',
+* 'Calls Outgoing To Onnet Inactive Days',
+* 'Calls Outgoing To Abroad Inactive Days',
+* 'Calls Outgoing Count',
+* 'Calls Outgoing To Offnet Spendings',
+* 'Sms Incoming Count',
+* 'User Has Outgoing Calls',
+* 'User Has Outgoing Sms',
+* 'User Account Balance Last' = Customer account balance at the end of the period
+* 'Calls Outgoing Duration Max'
+
+Churn Actions
+=====================================
+
+**Actions**
+
+```{r}
+drivers = c("user_account_id",
+            "logistic_regression_probability",
+            "prediction_logistic_regression",
+            "calls_outgoing_duration_max",
+            "user_account_balance_last",
+            "user_has_outgoing_sms",
+            "sms_outgoing_to_abroad_inactive_days",
+            "user_lifetime",
+            "reloads_inactive_days"
+            )
+
+df = churn::predicted_churn
+df = df[,drivers]
+
+churned = df %>% 
+  dplyr::filter(prediction_logistic_regression == 1) %>% 
+  dplyr::arrange(desc(logistic_regression_probability))
+
+loyal = df %>% 
+  dplyr::filter(prediction_logistic_regression == 0)
+
+churn_perc = nrow(churned)/nrow(df)*100
+churn_rate <- formatC(churn_perc, digits = 1, format = "f")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### Predicted Loyal Customers
+
+```{r}
+renderValueBox({
+  valueBox(value = nrow(loyal), icon = "fa-users")
+})
+```
+
+### Churn rate
+
+```{r}
+gauge(churn_rate, min = 0, max = 100, symbol = '%', gaugeSectors(
+  success = c(0, 10), warning = c(10, 20), danger = c(20, 100)
+))
+```
+
+### Predicted churn customers
+
+```{r}
+renderValueBox({
+  valueBox(value = nrow(churned), icon = "fa-users", color = "warning")
+})
+```
+
+Row {data-height=50}
+-----------------------------------------------------------------------
+
+<h5><b>
+Choose a customer to analyze his/her churn drivers and take appropriate business action.
+</b></h5>
+
+Row 
+-----------------------------------------------------------------------
+
+
+### Drivers analysis {data-width=700}
+
+```{r}
+# normalize
+fields = colnames(loyal)[4:ncol(loyal)]
+for (field in fields) {
+  median_v = median(loyal[[field]])
+  iqr_v = IQR(loyal[[field]])
+  loyal[[field]] = (loyal[[field]] - median_v) / iqr_v
+  churned[[field]] = (churned[[field]] - median_v) / iqr_v
+}
+
+# gather
+churned_clean = churned %>% tidyr::gather(driver, value, 4:ncol(churned))
+loyal_clean = loyal %>% tidyr::gather(driver, value, 4:ncol(loyal))
+
+# Reactive that returns the whole dataset if there is no brush
+selectedData <- reactive({
+  clean = churned_clean %>% filter(user_account_id == input$customer_id)
+})
+
+renderPlot({
+  theme_set(theme_gray(base_size = 18))
+  
+  ggplot(selectedData(), aes(driver, value)) + 
+    geom_point(colour = "red", size = 5, alpha = 0.5) + 
+    geom_boxplot(data=loyal_clean, mapping=aes(driver, value)) +
+    coord_flip(ylim = c(-3, 30))
+})
+```
+
+### Predicted churn customers {data-width=340}
+
+```{r}
+dp = churned[, 1]
+selectInput('customer_id', 'Account ID', dp, multiple=TRUE, selectize=FALSE, selected = 1190190, size=15)
+
+#renderTable({
+#dp = churned[1:200, 1:2]
+#colnames(dp) = c("Account ID", "Churn Probability")
+#dp
+#})
+```

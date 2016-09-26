@@ -1,0 +1,9 @@
+Package: churn
+Title: Telecom Customer Churn Prediction App
+Version: 1.0.0
+Authors@R: person("Data Science", "Think Big", email = "data.science@thinkbiganalytics.com", role = c("aut", "cre"))
+Description: R Shiny app to visualize and act on customer churn data for a telecommunication company.
+Depends: R (>= 3.2)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true

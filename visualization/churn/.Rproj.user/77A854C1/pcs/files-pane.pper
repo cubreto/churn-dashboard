@@ -1,9 +1,0 @@
-{
-    "path" : "~/ThinkBig/visualization/churn/inst/churnApp",
-    "sortOrder" : [
-        {
-            "ascending" : true,
-            "columnIndex" : 2
-        }
-    ]
-}

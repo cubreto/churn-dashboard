@@ -1,12 +1,5 @@
-# ThinkBig
+# DS-Newsletter
 
-### link website
+Actually we are using this for the Hackathon San Diego
 
-Add Shiny address here
-
-### ssh into server
-
-
-### open jupyter on your mac
-
-
+Will merge later with Teradata git

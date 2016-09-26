@@ -29,14 +29,12 @@ Row
 
 **Think Big Team**
 
-- Giacomo Snidero
-- Almir Mutapcic
 - Guillermo Breto Rangel
 
 **Business Problem**
 
-1. A telecommunication company wants to understand the motivations of customers churning and find possible actions to tackle this. 
-2. The dataset to leverage contains the customers services usage combined with demographics info.     
+1. Needed to understand the motivations of customers churning and find possible actions to tackle this problem. 
+2. The dataset to leverage contains the customers services usage collected from June through August 2013 combined with churn information from September 2013.     
 3. Develop a data statistical churn model and visualisation dashboard to drive actionable insights.
 
 ### {data-width=50%}
@@ -58,7 +56,7 @@ Row
 - Join and aggregate datasets
 - Develop data profiling to understand the main dataset 
 - Trained statistical models to undestand the churn main drivers and to predict customer churn
-- Use statistical model to predict customers like to churn on unseen data
+- Use statistical model to predict customers likely to churn on unseen data
 
 ### {data-width=340}
 
@@ -67,7 +65,7 @@ Row
 Key benefits were:
 
 - Indentified the churn patterns and key drivers 
-- Developed Statistical model that predicts customer churn with a score around 80%
+- Developed Statistical model that predicts customer churn with a score around between 82 to 90% accuracy.
 
 
 Churn Models

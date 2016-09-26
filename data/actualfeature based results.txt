@@ -1,0 +1,213 @@
+3.80136932926e-07
+K-Fold cross validation to verify consistancy in the errorsExtraTreesClassifier[ 0.90444977  0.89495919  0.89416809  0.89340208  0.89555167]
+('  -> Training time:', 8.80299997329712)
+ExtraTreesClassifierAccuracy Score: 0.796514
+K-Fold cross validation to verify consistancy in the errorsRandomForestClassifier[ 0.9160011   0.9089694   0.90912941  0.90608181  0.91061625]
+('  -> Training time:', 14.746000051498413)
+RandomForestClassifierAccuracy Score: 0.799872
+C:\Users\TG\Anaconda3\envs\dato-env\lib\site-packages\sklearn\lda.py:4: DeprecationWarning: lda.LDA has been moved to discriminant_analysis.LinearDiscriminantAnalysis in 0.17 and will be removed in 0.19
+  "in 0.17 and will be removed in 0.19", DeprecationWarning)
+C:\Users\TG\Anaconda3\envs\dato-env\lib\site-packages\sklearn\discriminant_analysis.py:387: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+
+K-Fold cross validation to verify consistancy in the errorsLinearDiscriminantAnalysis[ 0.89366577  0.89422614  0.89959136  0.89851801  0.89958473]
+('  -> Training time:', 1.50600004196167)
+LinearDiscriminantAnalysisAccuracy Score: 0.781487
+K-Fold cross validation to verify consistancy in the errorsGaussianNB[ 0.78040854  0.7880577   0.77449129  0.78338404  0.78917906]
+('  -> Training time:', 0.5510001182556152)
+GaussianNBAccuracy Score: 0.712843
+K-Fold cross validation to verify consistancy in the errorsGradientBoostingClassifier[ 0.93095236  0.92779207  0.92495351  0.92512501  0.93005493]
+('  -> Training time:', 114.63700008392334)
+GradientBoostingClassifierAccuracy Score: 0.823725
+K-Fold cross validation to verify consistancy in the errorsKNeighborsClassifier[ 0.89536579  0.89563864  0.89155974  0.87937477  0.89856059]
+('  -> Training time:', 180.75699996948242)
+KNeighborsClassifierAccuracy Score: 0.801249
+K-Fold cross validation to verify consistancy in the errorsDecisionTreeClassifier[ 0.78927408  0.77933764  0.77640369  0.77206483  0.78075624]
+('  -> Training time:', 12.585000038146973)
+DecisionTreeClassifierAccuracy Score: 0.788736
+K-Fold cross validation to verify consistancy in the errorsLogisticRegression[ 0.90574727  0.90318867  0.9073573   0.90491284  0.90876467]
+('  -> Training time:', 19.305999994277954)
+LogisticRegressionAccuracy Score: 0.787915
+-- Epoch 1
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 37221, Avg. loss: 0.693147
+Total training time: 0.03 seconds.
+-- Epoch 2
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 74442, Avg. loss: 0.693147
+Total training time: 0.06 seconds.
+-- Epoch 3
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 111663, Avg. loss: 0.693147
+Total training time: 0.09 seconds.
+-- Epoch 4
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 148884, Avg. loss: 0.693147
+Total training time: 0.12 seconds.
+-- Epoch 5
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 186105, Avg. loss: 0.693147
+Total training time: 0.14 seconds.
+-- Epoch 6
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 223326, Avg. loss: 0.693147
+Total training time: 0.17 seconds.
+-- Epoch 7
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 260547, Avg. loss: 0.693147
+Total training time: 0.20 seconds.
+-- Epoch 8
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 297768, Avg. loss: 0.693147
+Total training time: 0.22 seconds.
+-- Epoch 9
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 334989, Avg. loss: 0.693147
+Total training time: 0.25 seconds.
+-- Epoch 10
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 372210, Avg. loss: 0.693147
+Total training time: 0.27 seconds.
+-- Epoch 1
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 37222, Avg. loss: 0.693147
+Total training time: 0.03 seconds.
+-- Epoch 2
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 74444, Avg. loss: 0.693147
+Total training time: 0.06 seconds.
+-- Epoch 3
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 111666, Avg. loss: 0.693147
+Total training time: 0.09 seconds.
+-- Epoch 4
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 148888, Avg. loss: 0.693147
+Total training time: 0.12 seconds.
+-- Epoch 5
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 186110, Avg. loss: 0.693147
+Total training time: 0.14 seconds.
+-- Epoch 6
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 223332, Avg. loss: 0.693147
+Total training time: 0.18 seconds.
+-- Epoch 7
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 260554, Avg. loss: 0.693147
+Total training time: 0.21 seconds.
+-- Epoch 8
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 297776, Avg. loss: 0.693147
+Total training time: 0.24 seconds.
+-- Epoch 9
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 334998, Avg. loss: 0.693147
+Total training time: 0.27 seconds.
+-- Epoch 10
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 372220, Avg. loss: 0.693147
+Total training time: 0.30 seconds.
+-- Epoch 1
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 37223, Avg. loss: 0.693147
+Total training time: 0.02 seconds.
+-- Epoch 2
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 74446, Avg. loss: 0.693147
+Total training time: 0.05 seconds.
+-- Epoch 3
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 111669, Avg. loss: 0.693147
+Total training time: 0.07 seconds.
+-- Epoch 4
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 148892, Avg. loss: 0.693147
+Total training time: 0.09 seconds.
+-- Epoch 5
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 186115, Avg. loss: 0.693147
+Total training time: 0.12 seconds.
+-- Epoch 6
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 223338, Avg. loss: 0.693147
+Total training time: 0.14 seconds.
+-- Epoch 7
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 260561, Avg. loss: 0.693147
+Total training time: 0.17 seconds.
+-- Epoch 8
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 297784, Avg. loss: 0.693147
+Total training time: 0.19 seconds.
+-- Epoch 9
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 335007, Avg. loss: 0.693147
+Total training time: 0.21 seconds.
+-- Epoch 10
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 372230, Avg. loss: 0.693147
+Total training time: 0.23 seconds.
+-- Epoch 1
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 37223, Avg. loss: 0.693147
+Total training time: 0.02 seconds.
+-- Epoch 2
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 74446, Avg. loss: 0.693147
+Total training time: 0.04 seconds.
+-- Epoch 3
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 111669, Avg. loss: 0.693147
+Total training time: 0.06 seconds.
+-- Epoch 4
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 148892, Avg. loss: 0.693147
+Total training time: 0.08 seconds.
+-- Epoch 5
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 186115, Avg. loss: 0.693147
+Total training time: 0.10 seconds.
+-- Epoch 6
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 223338, Avg. loss: 0.693147
+Total training time: 0.12 seconds.
+-- Epoch 7
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 260561, Avg. loss: 0.693147
+Total training time: 0.14 seconds.
+-- Epoch 8
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 297784, Avg. loss: 0.693147
+Total training time: 0.16 seconds.
+-- Epoch 9
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 335007, Avg. loss: 0.693147
+Total training time: 0.18 seconds.
+-- Epoch 10
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 372230, Avg. loss: 0.693147
+Total training time: 0.20 seconds.
+-- Epoch 1
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 37223, Avg. loss: 0.693147
+Total training time: 0.02 seconds.
+-- Epoch 2
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 74446, Avg. loss: 0.693147
+Total training time: 0.04 seconds.
+-- Epoch 3
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 111669, Avg. loss: 0.693147
+Total training time: 0.06 seconds.
+-- Epoch 4
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 148892, Avg. loss: 0.693147
+Total training time: 0.08 seconds.
+-- Epoch 5
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 186115, Avg. loss: 0.693147
+Total training time: 0.10 seconds.
+-- Epoch 6
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 223338, Avg. loss: 0.693147
+Total training time: 0.12 seconds.
+-- Epoch 7
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 260561, Avg. loss: 0.693147
+Total training time: 0.15 seconds.
+-- Epoch 8
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 297784, Avg. loss: 0.693147
+Total training time: 0.17 seconds.
+-- Epoch 9
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 335007, Avg. loss: 0.693147
+Total training time: 0.19 seconds.
+-- Epoch 10
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 372230, Avg. loss: 0.693147
+Total training time: 0.21 seconds.
+K-Fold cross validation to verify consistancy in the errorsSGDClassifier[ 0.71588544  0.71555238  0.74805186  0.70508429  0.71304907]
+-- Epoch 1
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 46528, Avg. loss: 0.693147
+Total training time: 0.03 seconds.
+-- Epoch 2
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 93056, Avg. loss: 0.693147
+Total training time: 0.05 seconds.
+-- Epoch 3
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 139584, Avg. loss: 0.693147
+Total training time: 0.08 seconds.
+-- Epoch 4
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 186112, Avg. loss: 0.693147
+Total training time: 0.10 seconds.
+-- Epoch 5
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 232640, Avg. loss: 0.693147
+Total training time: 0.13 seconds.
+-- Epoch 6
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 279168, Avg. loss: 0.693147
+Total training time: 0.15 seconds.
+-- Epoch 7
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 325696, Avg. loss: 0.693147
+Total training time: 0.18 seconds.
+-- Epoch 8
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 372224, Avg. loss: 0.693147
+Total training time: 0.21 seconds.
+-- Epoch 9
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 418752, Avg. loss: 0.693147
+Total training time: 0.23 seconds.
+-- Epoch 10
+Norm: 0.00, NNZs: 62, Bias: -0.000000, T: 465280, Avg. loss: 0.693147
+Total training time: 0.26 seconds.
+('  -> Training time:', 1.6949999332427979)
+SGDClassifierAccuracy Score: 0.822300
